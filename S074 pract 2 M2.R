@@ -1,0 +1,23 @@
+library(dplyr)
+
+data <- read.csv("Business_sales_EDA.csv", stringsAsFactors = FALSE, sep = ";")
+
+table(data$Product.Position)
+table(data$Promotion)
+table(data$Product.Category)
+table(data$Seasonal)
+table(data$brand)
+table(data$section)
+table(data$season)
+table(data$material)
+table(data$origin)
+
+data %>% count(Product.Position)
+data %>% count(Promotion)
+data %>% count(Product.Category)
+data %>% count(Seasonal)
+data %>% count(brand)
+data %>% count(section)
+data %>% count(season)
+data %>% count(material)
+data %>% count(origin)
